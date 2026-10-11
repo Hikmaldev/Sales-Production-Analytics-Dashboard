@@ -93,8 +93,11 @@ trend buckets), exports, the import pipeline, and sync.
 ## Deployment
 
 `vercel.json` builds the Vite SPA to `dist/` (served from Vercel's CDN) and
-runs the Express app as a single Vercel Function for `/api/*`; the entry point
-is [`api/index.ts`](api/index.ts). Environment variables on Vercel:
+runs the Express app as a single Vercel Function for `/api/*`. Because Vercel
+does not compile TypeScript sources outside the `api/` directory, the entry
+is pre-bundled: `api/index.js` is generated from `server/vercel.ts` by
+`npm run build:api` (Vercel runs it during every deploy). Environment
+variables on Vercel:
 
 | Key | Notes |
 |---|---|
