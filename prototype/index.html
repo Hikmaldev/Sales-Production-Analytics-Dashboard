@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sales and production analytics dashboard" />
+  <title>Sales Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#dashboard" aria-label="Sales analytics dashboard home">
+        <span class="brand-mark" aria-hidden="true">SA</span>
+        <span class="brand-copy">
+          <strong>Sales Analytics</strong>
+          <span>Operations dashboard</span>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="Primary navigation">
+        <a class="topnav-link is-active" href="#dashboard">Dashboard</a>
+      </nav>
+
+      <div class="user-area">
+        <span class="role-label">Viewer</span>
+        <span class="user-avatar" aria-label="User account: Maya Santoso">MS</span>
+      </div>
+    </header>
+
+    <main id="dashboard" class="page-content">
+      <section class="page-heading" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Performance overview</p>
+          <h1 id="page-title">Sales dashboard</h1>
+          <p class="page-intro">A quick read on what is moving, where, and by how much.</p>
+        </div>
+        <div class="freshness" aria-label="Data freshness">
+          <span class="freshness-dot" aria-hidden="true"></span>
+          <span>Data as of <strong>Oct 9, 2026 · 08:42</strong></span>
+        </div>
+      </section>
+
+      <section class="filter-bar" aria-label="Dashboard filters">
+        <div class="filter-controls">
+          <label class="filter-field">
+            <span>Date range</span>
+            <select aria-label="Date range">
+              <option selected>This Month</option>
+              <option>Last 7 Days</option>
+              <option>Last Month</option>
+              <option>This Year</option>
+              <option>Custom range</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>Branch</span>
+            <select aria-label="Branch">
+              <option selected>All branches</option>
+              <option>Central Branch</option>
+              <option>West Branch</option>
+              <option>East Branch</option>
+            </select>
+          </label>
+
+          <label class="filter-field">
+            <span>Category</span>
+            <select aria-label="Product category">
+              <option selected>All categories</option>
+              <option>Equipment</option>
+              <option>Consumables</option>
+              <option>Services</option>
+            </select>
+          </label>
+        </div>
+
+        <details class="export-menu">
+          <summary>
+            <span class="download-icon" aria-hidden="true">↓</span>
+            Export
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="export-options">
+            <p class="export-label">Export current view</p>
+            <p class="export-context">This Month · All branches · All categories</p>
+            <a href="export.html">Export to PDF</a>
+            <a href="export.html">Export to Excel</a>
+          </div>
+        </details>
+      </section>
+
+      <section class="summary-grid" aria-label="Summary metrics">
+        <article class="summary-card">
+          <div class="card-label-row">
+            <p class="card-label">Total sales</p>
+            <span class="metric-icon" aria-hidden="true">↗</span>
+          </div>
+          <p class="metric-value">Rp 482.3M</p>
+          <p class="metric-change is-positive"><span aria-hidden="true">▲</span> 12.4% <span class="change-context">vs last month</span></p>
+        </article>
+
+        <article class="summary-card">
+          <div class="card-label-row">
+            <p class="card-label">Total units</p>
+            <span class="metric-icon" aria-hidden="true">▦</span>
+          </div>
+          <p class="metric-value">18,642</p>
+          <p class="metric-change is-positive"><span aria-hidden="true">▲</span> 8.1% <span class="change-context">vs last month</span></p>
+        </article>
+
+        <article class="summary-card">
+          <div class="card-label-row">
+            <p class="card-label">Average daily sales</p>
+            <span class="metric-icon" aria-hidden="true">◷</span>
+          </div>
+          <p class="metric-value">Rp 19.3M</p>
+          <p class="metric-change is-positive"><span aria-hidden="true">▲</span> 4.6% <span class="change-context">vs last month</span></p>
+        </article>
+
+        <article class="summary-card">
+          <div class="card-label-row">
+            <p class="card-label">Period-over-period</p>
+            <span class="metric-icon" aria-hidden="true">%</span>
+          </div>
+          <p class="metric-value">+12.4%</p>
+          <p class="metric-change is-positive"><span aria-hidden="true">▲</span> Positive trend <span class="change-context">this month</span></p>
+        </article>
+      </section>
+
+      <section class="chart-card trend-card" aria-labelledby="trend-title">
+        <div class="chart-header">
+          <div>
+            <p class="chart-kicker">Trend over time</p>
+            <h2 id="trend-title">Sales trend</h2>
+          </div>
+          <div class="legend" aria-label="Branch legend">
+            <span class="legend-item"><i class="legend-swatch data-blue"></i>Central Branch</span>
+            <span class="legend-item"><i class="legend-swatch data-amber"></i>West Branch</span>
+            <span class="legend-item"><i class="legend-swatch data-green"></i>East Branch</span>
+          </div>
+        </div>
+
+        <div class="line-chart" role="img" aria-label="Line chart showing sales trend from October 1 to October 9 for Central, West, and East branches">
+          <div class="y-axis-labels" aria-hidden="true">
+            <span>25M</span>
+            <span>20M</span>
+            <span>15M</span>
+            <span>10M</span>
+            <span>5M</span>
+            <span>0</span>
+          </div>
+          <div class="plot-area">
+            <div class="gridline grid-25"></div>
+            <div class="gridline grid-20"></div>
+            <div class="gridline grid-15"></div>
+            <div class="gridline grid-10"></div>
+            <div class="gridline grid-5"></div>
+            <div class="gridline grid-0"></div>
+            <svg viewBox="0 0 900 250" preserveAspectRatio="none" aria-hidden="true">
+              <polyline class="data-line line-blue" points="0,174 112,157 225,164 337,117 450,128 562,86 675,103 787,68 900,78" />
+              <polyline class="data-line line-amber" points="0,202 112,188 225,193 337,164 450,173 562,145 675,153 787,128 900,138" />
+              <polyline class="data-line line-green" points="0,220 112,207 225,214 337,185 450,194 562,162 675,178 787,150 900,158" />
+
+              <g class="hover-points point-blue">
+                <circle cx="562" cy="86" r="4"><title>Oct 6 · Central Branch · Rp 16.4M</title></circle>
+                <circle cx="787" cy="68" r="4"><title>Oct 8 · Central Branch · Rp 18.2M</title></circle>
+              </g>
+              <g class="hover-points point-amber">
+                <circle cx="562" cy="145" r="4"><title>Oct 6 · West Branch · Rp 11.2M</title></circle>
+                <circle cx="787" cy="128" r="4"><title>Oct 8 · West Branch · Rp 12.4M</title></circle>
+              </g>
+              <g class="hover-points point-green">
+                <circle cx="562" cy="162" r="4"><title>Oct 6 · East Branch · Rp 9.8M</title></circle>
+                <circle cx="787" cy="150" r="4"><title>Oct 8 · East Branch · Rp 10.8M</title></circle>
+              </g>
+            </svg>
+            <div class="x-axis-labels" aria-hidden="true">
+              <span>Oct 1</span><span>Oct 2</span><span>Oct 3</span><span>Oct 4</span><span>Oct 5</span><span>Oct 6</span><span>Oct 7</span><span>Oct 8</span><span>Oct 9</span>
+            </div>
+          </div>
+        </div>
+        <p class="chart-note">Sales value · Y-axis starts at zero · Hover a data point for exact value</p>
+      </section>
+
+      <section class="comparison-grid" aria-label="Comparison charts">
+        <article class="chart-card comparison-card" aria-labelledby="branch-title">
+          <div class="chart-header compact-header">
+            <div>
+              <p class="chart-kicker">Ranked comparison</p>
+              <h2 id="branch-title">Sales by branch</h2>
+            </div>
+            <span class="chart-period">This month</span>
+          </div>
+          <div class="bar-chart" role="img" aria-label="Bar chart comparing sales by branch">
+            <div class="bar-row">
+              <span class="bar-label">Central Branch</span>
+              <div class="bar-track"><span class="bar-fill data-blue-fill" style="width: 92%"></span></div>
+              <strong>Rp 216.4M</strong>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">West Branch</span>
+              <div class="bar-track"><span class="bar-fill data-amber-fill" style="width: 68%"></span></div>
+              <strong>Rp 159.7M</strong>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">East Branch</span>
+              <div class="bar-track"><span class="bar-fill data-green-fill" style="width: 45%"></span></div>
+              <strong>Rp 106.2M</strong>
+            </div>
+          </div>
+          <p class="chart-note">Ordered highest to lowest</p>
+        </article>
+
+        <article class="chart-card comparison-card" aria-labelledby="category-title">
+          <div class="chart-header compact-header">
+            <div>
+              <p class="chart-kicker">Ranked comparison</p>
+              <h2 id="category-title">Sales by category</h2>
+            </div>
+            <span class="chart-period">This month</span>
+          </div>
+          <div class="bar-chart" role="img" aria-label="Bar chart comparing sales by category">
+            <div class="bar-row">
+              <span class="bar-label">Equipment</span>
+              <div class="bar-track"><span class="bar-fill data-purple-fill" style="width: 88%"></span></div>
+              <strong>Rp 198.5M</strong>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Services</span>
+              <div class="bar-track"><span class="bar-fill data-pink-fill" style="width: 61%"></span></div>
+              <strong>Rp 142.8M</strong>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Consumables</span>
+              <div class="bar-track"><span class="bar-fill data-teal-fill" style="width: 48%"></span></div>
+              <strong>Rp 113.4M</strong>
+            </div>
+          </div>
+          <p class="chart-note">Ordered highest to lowest</p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

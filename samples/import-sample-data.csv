@@ -1,0 +1,44 @@
+﻿branch,category,product,quantity,value,record_date,external_ref
+Central Branch,Equipment,Espresso Machine,1,15000000,2026-10-02,PORTFOLIO-0001
+West Branch,Consumables,Coffee Beans 1kg,12,3000000,2026-10-02,PORTFOLIO-0002
+East Branch,Services,Installation Service,9,13500000,2026-10-02,PORTFOLIO-0003
+West Branch,Equipment,Batch Brewer,7,168000000,2026-10-02,PORTFOLIO-0004
+Central Branch,Services,Barista Training,6,18000000,2026-10-03,PORTFOLIO-0005
+East Branch,Consumables,Paper Filters,3,135000,2026-10-03,PORTFOLIO-0006
+Central Branch,Consumables,Paper Filters,7,315000,2026-10-03,PORTFOLIO-0007
+East Branch,Equipment,Espresso Machine,9,135000000,2026-10-03,PORTFOLIO-0008
+West Branch,Services,Machine Maintenance,2,1500000,2026-10-04,PORTFOLIO-0009
+Central Branch,Equipment,Coffee Grinder,10,85000000,2026-10-04,PORTFOLIO-0010
+West Branch,Consumables,Cleaning Tablets,7,630000,2026-10-04,PORTFOLIO-0011
+Central Branch,Equipment,Espresso Machine,3,45000000,2026-10-04,PORTFOLIO-0012
+East Branch,Services,Installation Service,4,6000000,2026-10-05,PORTFOLIO-0013
+West Branch,Equipment,Batch Brewer,7,168000000,2026-10-05,PORTFOLIO-0014
+East Branch,Consumables,Coffee Beans 1kg,4,1000000,2026-10-05,PORTFOLIO-0015
+Central Branch,Services,Barista Training,12,36000000,2026-10-05,PORTFOLIO-0016
+Central Branch,Consumables,Paper Filters,11,495000,2026-10-06,PORTFOLIO-0017
+East Branch,Equipment,Espresso Machine,3,45000000,2026-10-06,PORTFOLIO-0018
+Central Branch,Consumables,Coffee Beans 1kg,2,500000,2026-10-06,PORTFOLIO-0019
+West Branch,Services,Machine Maintenance,2,1500000,2026-10-06,PORTFOLIO-0020
+West Branch,Consumables,Cleaning Tablets,7,630000,2026-10-07,PORTFOLIO-0021
+Central Branch,Equipment,Espresso Machine,10,150000000,2026-10-07,PORTFOLIO-0022
+West Branch,Consumables,Coffee Beans 1kg,1,250000,2026-10-07,PORTFOLIO-0023
+East Branch,Services,Installation Service,11,16500000,2026-10-07,PORTFOLIO-0024
+East Branch,Consumables,Coffee Beans 1kg,8,2000000,2026-10-08,PORTFOLIO-0025
+Central Branch,Services,Barista Training,9,27000000,2026-10-08,PORTFOLIO-0026
+East Branch,Consumables,Paper Filters,12,540000,2026-10-08,PORTFOLIO-0027
+Central Branch,Consumables,Paper Filters,8,360000,2026-10-08,PORTFOLIO-0028
+East Branch,Equipment,Espresso Machine,12,180000000,2026-10-08,PORTFOLIO-0029
+Central Branch,Consumables,Paper Filters,1,45000,2026-10-09,PORTFOLIO-0030
+East Branch,Equipment,Espresso Machine,3,45000000,2026-10-09,PORTFOLIO-0031
+Central Branch,Consumables,Coffee Beans 1kg,5,1250000,2026-10-09,PORTFOLIO-0032
+West Branch,Services,Machine Maintenance,6,4500000,2026-10-09,PORTFOLIO-0033
+Central Branch,Equipment,Coffee Grinder,1,8500000,2026-10-09,PORTFOLIO-0034
+West Branch,Services,Machine Maintenance,10,7500000,2026-10-10,PORTFOLIO-0035
+Central Branch,Equipment,Coffee Grinder,5,42500000,2026-10-10,PORTFOLIO-0036
+West Branch,Consumables,Cleaning Tablets,6,540000,2026-10-10,PORTFOLIO-0037
+Central Branch,Equipment,Espresso Machine,6,90000000,2026-10-10,PORTFOLIO-0038
+East Branch,Services,Installation Service,9,13500000,2026-10-11,PORTFOLIO-0039
+West Branch,Equipment,Batch Brewer,9,216000000,2026-10-11,PORTFOLIO-0040
+East Branch,Consumables,Coffee Beans 1kg,4,1000000,2026-10-11,PORTFOLIO-0041
+Central Branch,Services,Barista Training,5,15000000,2026-10-11,PORTFOLIO-0042
+East Branch,Consumables,Paper Filters,2,90000,2026-10-11,PORTFOLIO-0043

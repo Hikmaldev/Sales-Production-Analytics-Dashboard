@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branches and categories · Sales Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Sales analytics dashboard home"><span class="brand-mark" aria-hidden="true">SA</span><span class="brand-copy"><strong>Sales Analytics</strong><span>Operations dashboard</span></span></a>
+      <nav class="topnav" aria-label="Primary navigation"><a class="topnav-link" href="index.html">Dashboard</a></nav>
+      <div class="user-area"><span class="role-label">Admin</span><span class="user-avatar" aria-label="User account: Maya Santoso">MS</span></div>
+    </header>
+
+    <main class="screen-main">
+      <div class="screen-heading">
+        <div><p class="eyebrow">Administration</p><h1>Branches &amp; categories</h1><p>Keep filter options current while preserving historical reporting data.</p></div>
+      </div>
+
+      <nav class="admin-nav" aria-label="Administration navigation"><a href="admin-data-sources.html">Data sources</a><a href="admin-users.html">Users</a><a class="is-active" href="admin-branches.html">Branches &amp; categories</a></nav>
+
+      <section class="table-card" aria-labelledby="branches-title">
+        <div class="table-card-header"><div><h2 id="branches-title">Branches</h2><p>Inactive branches remain available in historical records.</p></div><a class="button" href="#add-branch">+ Add branch</a></div>
+        <table class="data-table">
+          <thead><tr><th>Branch</th><th>Region</th><th>Historical records</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Central Branch</strong></td><td>Central</td><td>48,201</td><td><span class="status-badge is-active">Active</span></td><td><a class="text-link" href="#deactivate-central">Deactivate</a></td></tr>
+            <tr><td><strong>West Branch</strong></td><td>West</td><td>31,844</td><td><span class="status-badge is-active">Active</span></td><td><a class="text-link" href="#deactivate-west">Deactivate</a></td></tr>
+            <tr><td><strong>East Branch</strong></td><td>East</td><td>22,918</td><td><span class="status-badge is-active">Active</span></td><td><a class="text-link" href="#deactivate-east">Deactivate</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="table-card" style="margin-top: 24px" aria-labelledby="categories-title">
+        <div class="table-card-header"><div><h2 id="categories-title">Product categories</h2><p>Categories are used throughout dashboard filters and comparisons.</p></div><a class="button" href="#add-category">+ Add category</a></div>
+        <table class="data-table">
+          <thead><tr><th>Category</th><th>Products</th><th>Historical records</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Equipment</strong></td><td>24</td><td>39,420</td><td><span class="status-badge is-active">Active</span></td><td><a class="text-link" href="#deactivate-equipment">Deactivate</a></td></tr>
+            <tr><td><strong>Services</strong></td><td>16</td><td>31,106</td><td><span class="status-badge is-active">Active</span></td><td><a class="text-link" href="#deactivate-services">Deactivate</a></td></tr>
+            <tr><td><strong>Consumables</strong></td><td>18</td><td>28,704</td><td><span class="status-badge is-active">Active</span></td><td><a class="text-link" href="#deactivate-consumables">Deactivate</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

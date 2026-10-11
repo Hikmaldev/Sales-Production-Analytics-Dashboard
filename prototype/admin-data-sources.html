@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data sources · Sales Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Sales analytics dashboard home"><span class="brand-mark" aria-hidden="true">SA</span><span class="brand-copy"><strong>Sales Analytics</strong><span>Operations dashboard</span></span></a>
+      <nav class="topnav" aria-label="Primary navigation"><a class="topnav-link" href="index.html">Dashboard</a></nav>
+      <div class="user-area"><span class="role-label">Admin</span><span class="user-avatar" aria-label="User account: Maya Santoso">MS</span></div>
+    </header>
+
+    <main class="screen-main">
+      <div class="screen-heading">
+        <div><p class="eyebrow">Administration</p><h1>Data sources</h1><p>Monitor the data feeding your sales and production dashboard.</p></div>
+      </div>
+
+      <nav class="admin-nav" aria-label="Administration navigation">
+        <a class="is-active" href="admin-data-sources.html">Data sources</a>
+        <a href="admin-users.html">Users</a>
+        <a href="admin-branches.html">Branches &amp; categories</a>
+      </nav>
+
+      <section class="status-card" aria-label="Data sync status">
+        <div><h2>Sales records sync</h2><p>Source: scheduled company data import · Last completed Oct 9, 2026 at 08:42</p></div>
+        <div class="page-actions"><span class="sync-status">Synced successfully</span><a class="button" href="#refresh-sync">Refresh sync</a></div>
+      </section>
+
+      <section class="table-card" aria-labelledby="source-history-title">
+        <div class="table-card-header"><div><h2 id="source-history-title">Sync history</h2><p>Recent import activity and record counts.</p></div><span class="status-badge is-active">Healthy</span></div>
+        <table class="data-table">
+          <thead><tr><th>Date and time</th><th>Source</th><th>Records</th><th>Duration</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Oct 9, 2026 · 08:42</td><td>Scheduled import</td><td>12,486</td><td>01:18</td><td><span class="status-badge is-active">Success</span></td></tr>
+            <tr><td>Oct 8, 2026 · 08:41</td><td>Scheduled import</td><td>12,301</td><td>01:22</td><td><span class="status-badge is-active">Success</span></td></tr>
+            <tr><td>Oct 7, 2026 · 08:42</td><td>Scheduled import</td><td>12,197</td><td>01:16</td><td><span class="status-badge is-active">Success</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Export report · Sales Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Sales analytics dashboard home">
+        <span class="brand-mark" aria-hidden="true">SA</span>
+        <span class="brand-copy"><strong>Sales Analytics</strong><span>Operations dashboard</span></span>
+      </a>
+      <nav class="topnav" aria-label="Primary navigation">
+        <a class="topnav-link is-active" href="index.html">Dashboard</a>
+      </nav>
+      <div class="user-area"><span class="role-label">Viewer</span><span class="user-avatar" aria-label="User account: Maya Santoso">MS</span></div>
+    </header>
+
+    <main class="screen-main">
+      <div class="screen-heading">
+        <div>
+          <p class="eyebrow">Report delivery</p>
+          <h1>Export current view</h1>
+          <p>Choose a format for the exact dashboard filters currently on screen.</p>
+        </div>
+        <a class="text-link" href="index.html">← Back to dashboard</a>
+      </div>
+
+      <div class="export-layout">
+        <section class="export-card" aria-labelledby="export-title">
+          <h2 id="export-title">Select a format</h2>
+          <p class="export-card-intro">Your export will include the active filters and the aggregated data behind this view.</p>
+
+          <div class="format-options">
+            <div class="format-option">
+              <input id="pdf" name="format" type="radio" checked />
+              <label for="pdf">
+                <span class="format-icon" aria-hidden="true">PDF</span>
+                <strong>Dashboard PDF</strong>
+                <small>Charts and summary cards for a meeting-ready report.</small>
+              </label>
+            </div>
+            <div class="format-option">
+              <input id="excel" name="format" type="radio" />
+              <label for="excel">
+                <span class="format-icon" aria-hidden="true">XLS</span>
+                <strong>Filtered Excel</strong>
+                <small>Underlying filtered data for offline analysis.</small>
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-summary">
+            <p class="filter-summary-label">Filters included</p>
+            <p>Oct 1 – Oct 31, 2026 · All branches · All categories</p>
+          </div>
+
+          <div class="page-actions">
+            <a class="button" href="#download">Generate and download</a>
+            <a class="button-secondary" href="index.html">Cancel</a>
+          </div>
+        </section>
+
+        <aside class="detail-card" aria-labelledby="details-title">
+          <h2 id="details-title">Export details</h2>
+          <dl class="detail-list">
+            <div class="detail-row"><dt>Period</dt><dd>Oct 1 – Oct 31, 2026</dd></div>
+            <div class="detail-row"><dt>Branches</dt><dd>All branches</dd></div>
+            <div class="detail-row"><dt>Categories</dt><dd>All categories</dd></div>
+            <div class="detail-row"><dt>Requested by</dt><dd>Maya Santoso</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

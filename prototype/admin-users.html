@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Users · Sales Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Sales analytics dashboard home"><span class="brand-mark" aria-hidden="true">SA</span><span class="brand-copy"><strong>Sales Analytics</strong><span>Operations dashboard</span></span></a>
+      <nav class="topnav" aria-label="Primary navigation"><a class="topnav-link" href="index.html">Dashboard</a></nav>
+      <div class="user-area"><span class="role-label">Admin</span><span class="user-avatar" aria-label="User account: Maya Santoso">MS</span></div>
+    </header>
+
+    <main class="screen-main">
+      <div class="screen-heading">
+        <div><p class="eyebrow">Administration</p><h1>Users</h1><p>Manage who can access the dashboard and their role.</p></div>
+        <div class="page-actions"><a class="button" href="#add-user">+ Add user</a></div>
+      </div>
+
+      <nav class="admin-nav" aria-label="Administration navigation"><a href="admin-data-sources.html">Data sources</a><a class="is-active" href="admin-users.html">Users</a><a href="admin-branches.html">Branches &amp; categories</a></nav>
+
+      <section class="table-card" aria-labelledby="users-title">
+        <div class="table-card-header"><div><h2 id="users-title">Account directory</h2><p>Authenticated users with access to this dashboard.</p></div><span class="status-badge is-active">3 active users</span></div>
+        <table class="data-table">
+          <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Last active</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Maya Santoso</strong><br /><span class="muted">Current account</span></td><td>maya.santoso@company.com</td><td>Admin</td><td>Just now</td><td><span class="status-badge is-active">Active</span></td></tr>
+            <tr><td><strong>Raka Wijaya</strong></td><td>raka.wijaya@company.com</td><td>Viewer</td><td>Today, 08:31</td><td><span class="status-badge is-active">Active</span></td></tr>
+            <tr><td><strong>Nadia Putri</strong></td><td>nadia.putri@company.com</td><td>Viewer</td><td>Yesterday, 16:20</td><td><span class="status-badge is-active">Active</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
