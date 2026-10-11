@@ -4,6 +4,7 @@ import { Link, Navigate, useLocation, useNavigate } from "react-router";
 
 import { DEMO_ACCOUNTS } from "../lib/demo-accounts";
 import { useAuth } from "../state/AuthContext";
+import { BrandLogo } from "../components/BrandLogo";
 
 export function LoginPage() {
   const { user, login } = useAuth();
@@ -43,9 +44,7 @@ export function LoginPage() {
     <main className="auth-page">
       <section className="auth-intro" aria-label="Product introduction">
         <Link className="brand" to="/" aria-label="Sales analytics dashboard home">
-          <span className="brand-mark" aria-hidden="true">
-            SA
-          </span>
+          <BrandLogo size={38} className="brand-mark" />
           <span className="brand-copy">
             <strong>Sales Analytics</strong>
             <span>Operations dashboard</span>

@@ -1,5 +1,7 @@
 # Sales / Production Analytics Dashboard
 
+<img src="public/logo.svg" width="88" height="88" alt="Sales Analytics logo" />
+
 **Live demo:** https://sales-production-analytics-dashboard-hikmaldevs-projects.vercel.app
 (demo logins: `admin@example.com` / `admin12345` · `viewer@example.com` / `viewer12345`)
 

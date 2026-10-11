@@ -1,6 +1,7 @@
 import { Link, NavLink, Outlet } from "react-router";
 
 import { useAuth } from "../state/AuthContext";
+import { BrandLogo } from "./BrandLogo";
 
 function navLinkClass({ isActive }: { isActive: boolean }) {
   return isActive ? "topnav-link is-active" : "topnav-link";
@@ -24,9 +25,7 @@ export function AppShell() {
     <div className="app-shell">
       <header className="topbar">
         <Link className="brand" to="/" aria-label="Sales analytics dashboard home">
-          <span className="brand-mark" aria-hidden="true">
-            SA
-          </span>
+          <BrandLogo size={34} className="brand-mark" />
           <span className="brand-copy">
             <strong>Sales Analytics</strong>
             <span>Operations dashboard</span>

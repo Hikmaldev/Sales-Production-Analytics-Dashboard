@@ -1619,8 +1619,14 @@ function drawReport(doc, payload) {
   const left = PAGE_MARGIN;
   const contentWidth = doc.page.width - PAGE_MARGIN * 2;
   let y = PAGE_MARGIN;
+  const badgeSize = 26;
+  drawBrandMark(doc, left, y - 2, badgeSize);
   doc.font("Helvetica-Bold").fontSize(18).fillColor(INK);
-  doc.text("Sales / Production Analytics Report", left, y);
+  doc.text(
+    "Sales / Production Analytics Report",
+    left + badgeSize + 12,
+    y - 2
+  );
   y = doc.y + 6;
   doc.font("Helvetica").fontSize(9).fillColor(MUTED);
   doc.text(`Period: ${payload.filters.start} to ${payload.filters.end}`, left, y);
@@ -1842,6 +1848,29 @@ function formatCurrency(value) {
 function formatSignedPercent(value) {
   const sign = value > 0 ? "+" : value < 0 ? "-" : "";
   return `${sign}${Math.abs(value).toFixed(1)}%`;
+}
+function drawBrandMark(doc, x, y, size) {
+  const u = size / 64;
+  doc.roundedRect(x, y, size, size, 16 * u).fill("#2F5FBF");
+  const bars = [
+    { bx: 13, by: 37, opacity: 0.62 },
+    { bx: 26, by: 30, opacity: 0.82 },
+    { bx: 39, by: 22, opacity: 1 }
+  ];
+  for (const bar of bars) {
+    doc.fillOpacity(bar.opacity);
+    doc.roundedRect(
+      x + bar.bx * u,
+      y + bar.by * u,
+      9 * u,
+      (50 - bar.by) * u,
+      3 * u
+    ).fill("#FFFFFF");
+  }
+  doc.fillOpacity(1);
+  doc.lineWidth(3.4 * u).lineCap("round").lineJoin("round").strokeColor("#BCD3FF");
+  doc.moveTo(x + 13 * u, y + 31 * u).lineTo(x + 26 * u, y + 22.5 * u).lineTo(x + 43 * u, y + 14 * u).stroke();
+  doc.circle(x + 43 * u, y + 14 * u, 2.8 * u).fill("#FFFFFF");
 }
 var INK, MUTED, BORDER, PAGE_MARGIN;
 var init_export_pdf_service = __esm({
