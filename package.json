@@ -20,6 +20,7 @@
     "db:bootstrap": "tsx prisma/bootstrap.ts",
     "db:clear": "tsx prisma/clear.ts",
     "samples:generate": "tsx scripts/generate-samples.ts",
+    "cover:generate": "node scripts/generate-cover.mjs",
     "db:studio": "prisma studio",
     "api": "tsx server/index.ts"
   },
@@ -54,6 +55,7 @@
     "@vitejs/plugin-react": "^6.1.2",
     "esbuild": "^0.28.2",
     "prisma": "^7.10.0",
+    "sharp": "^0.35.5",
     "supertest": "^7.3.1",
     "tsx": "^4.23.15",
     "typescript": "~7.0.2",

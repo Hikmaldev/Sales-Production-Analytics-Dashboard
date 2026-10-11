@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1322"/>
+      <stop offset="0.55" stop-color="#101C36"/>
+      <stop offset="1" stop-color="#0A1120"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.12" cy="0.05" r="0.75">
+      <stop offset="0" stop-color="#2F5FBF" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#2F5FBF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  
+  <g transform="translate(96,88) scale(1.5)">
+    <rect width="64" height="64" rx="16" fill="#2F5FBF"/>
+    <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.5"/>
+    <rect x="13" y="37" width="9" height="13" rx="3" fill="#FFFFFF" fill-opacity="0.62"/>
+    <rect x="26" y="30" width="9" height="20" rx="3" fill="#FFFFFF" fill-opacity="0.82"/>
+    <rect x="39" y="22" width="9" height="28" rx="3" fill="#FFFFFF"/>
+    <path d="M13 31L26 22.5L43 14" fill="none" stroke="#BCD3FF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="43" cy="14" r="2.8" fill="#FFFFFF"/>
+  </g>
+  <text x="232" y="124" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="600" fill="#FFFFFF">Sales Analytics</text>
+  <text x="232" y="160" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" fill="#8FA2C4">Operations dashboard</text>
+
+  <text x="96" y="368" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="62" font-weight="700" fill="#FFFFFF">Sales &amp; Production</text>
+  <text x="96" y="444" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="62" font-weight="700" fill="#8CB0F5">Analytics Dashboard</text>
+  <text x="96" y="512" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#A9B7D0">Interactive filters, comparisons, and exports.</text>
+  <text x="96" y="562" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#8FA2C4">Filters by date range, branch, and product category.</text>
+
+  <rect x="96" y="610" width="109" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/><text x="150.5" y="645" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#D6E1F7" text-anchor="middle">React</text><rect x="221" y="610" width="165" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/><text x="303.5" y="645" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#D6E1F7" text-anchor="middle">TypeScript</text><rect x="402" y="610" width="131" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/><text x="467.5" y="645" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#D6E1F7" text-anchor="middle">Express</text><rect x="549" y="610" width="120" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/><text x="609" y="645" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#D6E1F7" text-anchor="middle">Prisma</text>
+  <rect x="96" y="682" width="245" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/><text x="218.5" y="717" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#D6E1F7" text-anchor="middle">PostgreSQL · Neon</text><rect x="357" y="682" width="120" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/><text x="417" y="717" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#D6E1F7" text-anchor="middle">Vercel</text><rect x="493" y="682" width="256" height="54" rx="27" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.16"/><text x="621" y="717" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" fill="#D6E1F7" text-anchor="middle">Vitest + Supertest</text>
+
+  <text x="96" y="852" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#7C8AA5">Live demo · 62 backend tests (Vitest + Supertest) · Deployed on Vercel + Neon</text>
+
+  <rect x="830" y="120" width="674" height="660" rx="28" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <text x="872" y="178" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="600" fill="#E7EEFB">Sales trend</text>
+  <text x="872" y="208" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#8FA2C4">Last 30 days · all branches</text>
+  <circle cx="1300" cy="166" r="7" fill="#6D9BF5"/>
+  <circle cx="1332" cy="166" r="7" fill="#F2B25C"/>
+  <circle cx="1364" cy="166" r="7" fill="#56C97A"/>
+
+  <line x1="872" y1="260" x2="1462" y2="260" stroke="#FFFFFF" stroke-opacity="0.08"/><line x1="872" y1="338" x2="1462" y2="338" stroke="#FFFFFF" stroke-opacity="0.08"/><line x1="872" y1="416" x2="1462" y2="416" stroke="#FFFFFF" stroke-opacity="0.08"/><line x1="872" y1="494" x2="1462" y2="494" stroke="#FFFFFF" stroke-opacity="0.08"/><line x1="872" y1="572" x2="1462" y2="572" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <polyline points="872,470 970,428 1068,444 1166,376 1264,392 1362,324 1462,292" fill="none" stroke="#6D9BF5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="872,516 970,495 1068,505 1166,458 1264,472 1362,420 1462,396" fill="none" stroke="#F2B25C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="872,552 970,531 1068,540 1166,510 1264,520 1362,478 1462,458" fill="none" stroke="#56C97A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1462" cy="292" r="7" fill="#FFFFFF"/>
+  <circle cx="1462" cy="396" r="7" fill="#FFFFFF"/>
+  <circle cx="1462" cy="458" r="7" fill="#FFFFFF"/>
+
+  <rect x="872" y="620" width="286" height="132" rx="18" fill="#FFFFFF" fill-opacity="0.05"/>
+  <text x="902" y="662" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#9FB0CC">Total sales</text>
+  <text x="902" y="704" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Rp 4.9B</text>
+  <text x="902" y="736" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="600" fill="#56C97A">▲ +18.2% vs previous period</text>
+
+  <rect x="1176" y="620" width="286" height="132" rx="18" fill="#FFFFFF" fill-opacity="0.05"/>
+  <text x="1206" y="662" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#9FB0CC">Average daily sales</text>
+  <text x="1206" y="704" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Rp 547M</text>
+  <text x="1206" y="736" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#8FA2C4">Data as of Oct 11, 2026</text>
+</svg>
