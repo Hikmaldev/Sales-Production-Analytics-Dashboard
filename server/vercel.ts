@@ -3,14 +3,18 @@ import type { IncomingMessage, ServerResponse } from "node:http";
 type ExpressHandler = (req: IncomingMessage, res: ServerResponse) => void;
 
 /**
- * Vercel serverless entry point (see vercel.json).
+ * Vercel serverless entry point.
+ *
+ * Bundled to api/index.js by `npm run build:api` (esbuild) because Vercel
+ * does not compile TypeScript sources outside the api/ directory. npm
+ * packages stay external and are traced by Vercel at build time.
  *
  * Vercel routes /api/* here through a rewrite that appends the original
- * sub-path as `__api_path`, so this handler always reconstructs the real
+ * sub-path as `__api_path`, so this handler reconstructs the real
  * `/api/v1/...` URL before handing the request to the Express app.
  *
- * The app is created lazily so that an initialization failure returns a
- * readable JSON error instead of an opaque FUNCTION_INVOCATION_FAILED.
+ * The app is created lazily so an initialization failure returns a readable
+ * JSON error instead of an opaque FUNCTION_INVOCATION_FAILED.
  */
 let app: ExpressHandler | null = null;
 let initError: string | null = null;
@@ -21,7 +25,7 @@ async function initialize(): Promise<void> {
   initialized = true;
 
   try {
-    const { createApp } = await import("../server/app");
+    const { createApp } = await import("./app");
     app = createApp() as unknown as ExpressHandler;
   } catch (error) {
     initError = error instanceof Error ? error.message : String(error);
