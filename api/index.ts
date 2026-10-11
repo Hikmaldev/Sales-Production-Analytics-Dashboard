@@ -1,21 +1,49 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
 
-import { createApp } from "../server/app";
+type ExpressHandler = (req: IncomingMessage, res: ServerResponse) => void;
 
 /**
  * Vercel serverless entry point (see vercel.json).
  *
  * Vercel routes /api/* here through a rewrite that appends the original
  * sub-path as `__api_path`, so this handler always reconstructs the real
- * `/api/v1/...` URL before handing the request to the Express app — no
- * matter whether the platform preserves or masks the path internally.
+ * `/api/v1/...` URL before handing the request to the Express app.
+ *
+ * The app is created lazily so that an initialization failure returns a
+ * readable JSON error instead of an opaque FUNCTION_INVOCATION_FAILED.
  */
-const app = createApp();
+let app: ExpressHandler | null = null;
+let initError: string | null = null;
+let initialized = false;
 
-export default function handler(
+async function initialize(): Promise<void> {
+  if (initialized) return;
+  initialized = true;
+
+  try {
+    const { createApp } = await import("../server/app");
+    app = createApp() as unknown as ExpressHandler;
+  } catch (error) {
+    initError = error instanceof Error ? error.message : String(error);
+    console.error("API initialization failed:", error);
+  }
+}
+
+export default async function handler(
   req: IncomingMessage,
   res: ServerResponse,
-): void {
+): Promise<void> {
+  await initialize();
+
+  if (!app) {
+    res.statusCode = 500;
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.end(
+      JSON.stringify({ error: "api_initialization_failed", message: initError }),
+    );
+    return;
+  }
+
   const rawUrl = req.url ?? "/";
   const queryIndex = rawUrl.indexOf("?");
   const queryString = queryIndex >= 0 ? rawUrl.slice(queryIndex + 1) : "";
@@ -28,8 +56,5 @@ export default function handler(
     req.url = `/api/${originalPath}${query ? `?${query}` : ""}`;
   }
 
-  (app as unknown as (req: IncomingMessage, res: ServerResponse) => void)(
-    req,
-    res,
-  );
+  app(req, res);
 }

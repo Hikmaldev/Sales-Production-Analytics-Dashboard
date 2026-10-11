@@ -1,5 +1,8 @@
 # Sales / Production Analytics Dashboard
 
+**Live demo:** https://sales-production-analytics-dashboard-hikmaldevs-projects.vercel.app
+(demo logins: `admin@example.com` / `admin12345` · `viewer@example.com` / `viewer12345`)
+
 A full-stack analytics dashboard that turns raw sales/production tables into
 charts a manager can read in seconds: filter by date range, branch, and
 category, compare branches and categories, and export the current view to PDF
